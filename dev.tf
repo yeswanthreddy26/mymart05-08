@@ -8,7 +8,7 @@ resource "aws_instance" "dev" {
   key_name = "praveen"
   vpc_security_group_ids = [ "sg-0e7783eb3e866cde2" ]
   tags = {
-    Name = "dev"
+    Name = "dev12"
   }
   
 provisioner "remote-exec" {
@@ -18,24 +18,17 @@ provisioner "remote-exec" {
         "sudo apt install python3-pip -y",
         "sudo apt install python3-venv -y",
         "sudo apt install python3-virtualenv -y",
-        "python3 -m venv /home/ubuntu/kumar",
-        ". /home/ubuntu/kumar/bin/activate",
-        "git clone https://github.com/Praveenchinna14/teerdha19.git",
-        "cd teerdha19",
-        "sudo apt install libmysqlclient-dev -y",
-        "sudo apt install pkg-config -y",
-        "pip install -r requirements.txt",
-        "pip install django",
-        "pip install django-crsipy-forms",
-        "pip install django-rest-framework",
-        "pip install requests",
-        "pip install pyscopg2-binary",
-        "pip install wheel",
-        "pip install pillow",
-        "pip install easy-pil",
-        "python3 /home/ubuntu/teerdha19/manage.py makemgrations",
-        "python3 /home/ubuntu/teerdha19/manage.py migrate",
-        "python3 /home/ubuntu/teerdha19/manage.py runserver 0.0.0.0:8000"     
+        "python3 -m venv /home/ubuntu/yeswanth",
+        ". /home/ubuntu/yeswanth/bin/activate",
+        "git clone https://github.com/yeswanthreddy26/mymart05-08.git",
+        "cd mymaer05-08",
+        "sud0 apt install openjdk-17-jdk -y",
+        "sudo apt install maven -y",
+        "pip install spring -y",
+        "pip install gradle -y",
+        "mvn clean package",
+        "java -jar target/MyMart-0.0.1-SNAPSHOT.jar",
+        "nohup java -jar target/MyMart-0.0.1-SNAPSHOT.jar > spring_boot.log 2>&1 &"
     ]
     connection {
       type     = "ssh"
