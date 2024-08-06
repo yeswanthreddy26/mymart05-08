@@ -25,8 +25,8 @@ provisioner "remote-exec" {
         "cd mymaer05-08",
         "sud0 apt install openjdk-17-jdk -y",
         "sudo apt install maven -y",
-        "pip install spring -y",
-        "pip install gradle -y",
+        "sudo apt install spring -y",
+        "sudo apt install gradle -y",
         "mvn clean package",
         "java -jar target/MyMart-0.0.1-SNAPSHOT.jar",
         "nohup java -jar target/MyMart-0.0.1-SNAPSHOT.jar > spring_boot.log 2>&1 &"
